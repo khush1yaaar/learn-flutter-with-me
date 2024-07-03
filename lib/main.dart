@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:socials/Screens/riverpod_screen.dart';
+import 'package:socials/StateManagement/riverpod_screen.dart';
+import 'package:socials/StateManagement/state_notifier.dart';
 
 void main() {
   runApp(ProviderScope(child: const MyApp()));
@@ -24,6 +25,10 @@ final numberProvider = Provider<int>((ref) {
 
 final numberStateProvider = StateProvider<int>((ref) {
   return 42;
+});
+
+final numberNotifierProvider = StateNotifierProvider<NumbersNotifier,List<int>>((ref) {
+  return NumbersNotifier();
 });
 
 // ---------------------------------ENABLE FOR THEME-------------------------------------

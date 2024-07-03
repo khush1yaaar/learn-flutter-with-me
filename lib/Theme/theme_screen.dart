@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart'; // Importing Flutter material package for UI components.
-import 'package:socials/themes.dart'; // Importing a custom theme package (assumed to be defined elsewhere).
+import 'package:socials/Theme/themes.dart'; // Importing a custom theme package (assumed to be defined elsewhere).
 
 // Defining a stateful widget named ThemeScreen.
 class ThemeScreen extends StatefulWidget {
