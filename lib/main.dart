@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:socials/StateManagement/notifier_provider.dart';
 import 'package:socials/StateManagement/riverpod_screen.dart';
 import 'package:socials/StateManagement/state_notifier.dart';
 
@@ -30,6 +31,11 @@ final numberStateProvider = StateProvider<int>((ref) {
 final numberNotifierProvider = StateNotifierProvider<NumbersNotifier,List<int>>((ref) {
   return NumbersNotifier();
 });
+
+final numbersChangeNotifierProvider = ChangeNotifierProvider<NumbersChangeNotifier>((ref) {
+  return NumbersChangeNotifier();
+});
+
 
 // ---------------------------------ENABLE FOR THEME-------------------------------------
 // class MyApp extends StatefulWidget {

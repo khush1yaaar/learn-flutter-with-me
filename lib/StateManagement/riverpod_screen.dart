@@ -78,6 +78,47 @@ class RiverpodScreen extends StatefulWidget {
 
 //-------------------------------STATE NOTIFIER PROVIDER---------------------------------
 
+// class _RiverpodScreenState extends State<RiverpodScreen> {
+//   @override
+//   Widget build(BuildContext context) {
+    
+//     return Scaffold(
+//       body: Center(
+//         child: Consumer(
+//           builder: (context, ref, child) {
+//             // Watch the numberStateProvider to get the current value
+//             final numbersNotifierState = ref.watch(numberNotifierProvider);
+//             return ListView.builder(
+//               itemBuilder: (context,index) {
+//                 return Text(numbersNotifierState[index].toString());
+//               },
+//               itemCount: numbersNotifierState.length,
+//             );
+//           },
+//         ),
+//       ),
+//       floatingActionButton: Consumer(
+//         builder: (context, ref, child) {
+//           return FloatingActionButton(
+//             onPressed: () {
+//               //increment(ref); // Pass ref to the increment function
+//               ref.read(numberNotifierProvider.notifier).add(5);
+//             },
+//             child: Icon(Icons.add), // Add an icon for the button
+//           );
+//         },
+//       ),
+      
+//     );
+//   }
+//   void increment(WidgetRef ref) {
+//     // Use ref.read to access and update the state
+//     ref.read(numberStateProvider.notifier).state++;
+//   }
+// }
+
+
+//-----------------------CHANGE NOTIFIER PROVIDER------------------------------
 class _RiverpodScreenState extends State<RiverpodScreen> {
   @override
   Widget build(BuildContext context) {
@@ -87,12 +128,12 @@ class _RiverpodScreenState extends State<RiverpodScreen> {
         child: Consumer(
           builder: (context, ref, child) {
             // Watch the numberStateProvider to get the current value
-            final numbersNotifierState = ref.watch(numberNotifierProvider);
+            final numbersNotifierProvider = ref.watch(numbersChangeNotifierProvider);
             return ListView.builder(
               itemBuilder: (context,index) {
-                return Text(numbersNotifierState[index].toString());
+                return Text(numbersNotifierProvider.numbers[index].toString());
               },
-              itemCount: numbersNotifierState.length,
+              itemCount: numbersNotifierProvider.numbers.length,
             );
           },
         ),
@@ -102,7 +143,7 @@ class _RiverpodScreenState extends State<RiverpodScreen> {
           return FloatingActionButton(
             onPressed: () {
               //increment(ref); // Pass ref to the increment function
-              ref.read(numberNotifierProvider.notifier).add(5);
+              ref.read(numberNotifierProvider.notifier).add(15);
             },
             child: Icon(Icons.add), // Add an icon for the button
           );
