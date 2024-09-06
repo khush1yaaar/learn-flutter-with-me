@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:socials/ResponsiveLayout/layout_one.dart';
+// ignore: depend_on_referenced_packages
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:socials/StateManagement/notifier_provider.dart';
-import 'package:socials/StateManagement/riverpod_screen.dart';
+//import 'package:socials/StateManagement/riverpod_screen.dart';
 import 'package:socials/StateManagement/state_notifier.dart';
-import 'package:socials/Theme/theme_screen.dart';
-import 'package:socials/Theme/themes.dart';
+// import 'package:socials/Theme/theme_screen.dart';
+// import 'package:socials/Theme/themes.dart';
 
 // void main() {
 //   runApp(ProviderScope(child: const MyApp()));
