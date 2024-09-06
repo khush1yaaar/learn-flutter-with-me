@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:socials/ResponsiveLayout/layout_one.dart';
-// import 'package:flutter_riverpod/flutter_riverpod.dart';
-// import 'package:socials/StateManagement/notifier_provider.dart';
-// import 'package:socials/StateManagement/riverpod_screen.dart';
-// import 'package:socials/StateManagement/state_notifier.dart';
-// import 'package:socials/Theme/theme_screen.dart';
-// import 'package:socials/Theme/themes.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:socials/StateManagement/notifier_provider.dart';
+import 'package:socials/StateManagement/riverpod_screen.dart';
+import 'package:socials/StateManagement/state_notifier.dart';
+import 'package:socials/Theme/theme_screen.dart';
+import 'package:socials/Theme/themes.dart';
 
 // void main() {
 //   runApp(ProviderScope(child: const MyApp()));
@@ -23,21 +23,21 @@ import 'package:socials/ResponsiveLayout/layout_one.dart';
 //   }
 // }
 
-// final numberProvider = Provider<int>((ref) {
-//   return 42;
-// });
+final numberProvider = Provider<int>((ref) {
+  return 42;
+});
 
-// final numberStateProvider = StateProvider<int>((ref) {
-//   return 42;
-// });
+final numberStateProvider = StateProvider<int>((ref) {
+  return 42;
+});
 
-// final numberNotifierProvider = StateNotifierProvider<NumbersNotifier,List<int>>((ref) {
-//   return NumbersNotifier();
-// });
+final numberNotifierProvider = StateNotifierProvider<NumbersNotifier,List<int>>((ref) {
+  return NumbersNotifier();
+});
 
-// final numbersChangeNotifierProvider = ChangeNotifierProvider<NumbersChangeNotifier>((ref) {
-//   return NumbersChangeNotifier();
-// });
+final numbersChangeNotifierProvider = ChangeNotifierProvider<NumbersChangeNotifier>((ref) {
+  return NumbersChangeNotifier();
+});
 
 // ---------------------------------ENABLE FOR THEME-------------------------------------
 // class MyApp extends StatefulWidget {
