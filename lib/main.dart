@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:socials/ResponsiveLayout/layout_one.dart';
+import 'package:socials/BLoC/home_screen.dart';
+import 'package:socials/ResponsiveLayout/LayoutOne/layout_one.dart';
 // ignore: depend_on_referenced_packages
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:socials/StateManagement/notifier_provider.dart';
@@ -69,6 +70,26 @@ final numbersChangeNotifierProvider = ChangeNotifierProvider<NumbersChangeNotifi
 //     );
 //   }
 // }
+// ------------------------------------------------ FOR RESPONSIVE LAYOUT ------------------------------------------
+// void main() {
+//   runApp(const MyApp());
+// }
+
+// class MyApp extends StatefulWidget {
+//   const MyApp({super.key});
+
+//   @override
+//   State<MyApp> createState() => _MyAppState();
+// }
+
+// class _MyAppState extends State<MyApp> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return const MaterialApp(
+//       home: LayoutOne(),
+//     );
+//   }
+// }
 
 void main() {
   runApp(MyApp());
@@ -85,7 +106,8 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: LayoutOne(),
+      home: HomeScreen(),
     );
   }
 }
+

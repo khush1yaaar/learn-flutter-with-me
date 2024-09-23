@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:socials/ResponsiveLayout/layout_one_helper.dart';
+import 'package:socials/ResponsiveLayout/LayoutOne/layout_one_helper.dart';
 
 // ----------------------------------- ANOTHER WAY OF IMPLEMENTING RESPOSIVE LAYOUT WITH THE HELPER SCREEN WIDGET ------------------------------------
 class LayoutOne extends StatefulWidget {
