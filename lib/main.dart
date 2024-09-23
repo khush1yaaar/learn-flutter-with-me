@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:socials/BLoC/blocs/internet_bloc/internet_bloc.dart';
 import 'package:socials/BLoC/home_screen.dart';
 import 'package:socials/ResponsiveLayout/LayoutOne/layout_one.dart';
 // ignore: depend_on_referenced_packages
@@ -33,11 +35,13 @@ final numberStateProvider = StateProvider<int>((ref) {
   return 42;
 });
 
-final numberNotifierProvider = StateNotifierProvider<NumbersNotifier,List<int>>((ref) {
+final numberNotifierProvider =
+    StateNotifierProvider<NumbersNotifier, List<int>>((ref) {
   return NumbersNotifier();
 });
 
-final numbersChangeNotifierProvider = ChangeNotifierProvider<NumbersChangeNotifier>((ref) {
+final numbersChangeNotifierProvider =
+    ChangeNotifierProvider<NumbersChangeNotifier>((ref) {
   return NumbersChangeNotifier();
 });
 
@@ -105,9 +109,11 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: HomeScreen(),
+    return BlocProvider(
+      create: (context) => InternetBloc(),
+      child: const MaterialApp(
+        home: HomeScreen(),
+      ),
     );
   }
 }
-
