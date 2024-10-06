@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:io';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:socials/BLoC/blocs/internet_bloc/internet_event.dart';
@@ -7,7 +8,7 @@ import 'package:socials/BLoC/blocs/internet_bloc/internet_state.dart';
 // InternetBloc manages the internet connectivity state using BLoC pattern.
 class InternetBloc extends Bloc<InternetEvent, InternetState> {
   // Connectivity instance to check the network status.
-  Connectivity _connectivity = Connectivity();
+  final Connectivity _connectivity = Connectivity();
   // Subscription to listen for connectivity changes.
   StreamSubscription? connectivitySubscription;
 
@@ -20,15 +21,27 @@ class InternetBloc extends Bloc<InternetEvent, InternetState> {
     on<InternetGainEvent>((event, emit) => emit(InternetGainState()));
 
     // Listen for changes in connectivity status.
-    connectivitySubscription = _connectivity.onConnectivityChanged.listen((result) {
-      // If connected to mobile or WiFi, add an InternetGainEvent.
-      if (result == ConnectivityResult.mobile || result == ConnectivityResult.wifi) {
+    connectivitySubscription = _connectivity.onConnectivityChanged.listen((result) async {
+      // Check for actual internet access
+      bool hasInternet = await _hasInternetConnection();
+      
+      // Emit event based on internet access
+      if (hasInternet) {
         add(InternetGainEvent());
       } else {
-        // If disconnected, add an InternetLostEvent.
         add(InternetLostEvent());
       }
     });
+  }
+
+  // Function to check actual internet access
+  Future<bool> _hasInternetConnection() async {
+    try {
+      final result = await InternetAddress.lookup('google.com');
+      return result.isNotEmpty && result[0].rawAddress.isNotEmpty;
+    } on SocketException catch (_) {
+      return false;
+    }
   }
 
   // Override the close method to cancel the subscription when the Bloc is disposed.

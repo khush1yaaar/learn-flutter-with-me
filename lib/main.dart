@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:socials/BLoC/blocs/internet_bloc/internet_bloc.dart';
-import 'package:socials/BLoC/home_screen.dart';
-import 'package:socials/ResponsiveLayout/LayoutOne/layout_one.dart';
+// import 'package:socials/ResponsiveLayout/LayoutOne/layout_one.dart';
 // ignore: depend_on_referenced_packages
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:socials/Cubit/home_screen.dart';
+import 'package:socials/Cubit/internet_cubit.dart';
 import 'package:socials/StateManagement/notifier_provider.dart';
 //import 'package:socials/StateManagement/riverpod_screen.dart';
 import 'package:socials/StateManagement/state_notifier.dart';
@@ -95,8 +95,33 @@ final numbersChangeNotifierProvider =
 //   }
 // }
 
+//--------------------------------------------------------------BLOC----------------------------------------------------------------------
+// void main() {
+//   runApp(MyApp());
+// }
+
+// class MyApp extends StatefulWidget {
+//   const MyApp({super.key});
+
+//   @override
+//   State<MyApp> createState() => _MyAppState();
+// }
+
+// class _MyAppState extends State<MyApp> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return BlocProvider(
+//       create: (context) => InternetBloc(),
+//       child: const MaterialApp(
+//         debugShowCheckedModeBanner: false,
+//         home: HomeScreen(),
+//       ),
+//     );
+//   }
+// }
+//---------------------------------------------------------- CUBIT -------------------------------------------------------------------------
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
@@ -110,9 +135,10 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => InternetBloc(),
+      create: (context) => InternetCubit(), // Correctly create InternetCubit
       child: const MaterialApp(
-        home: HomeScreen(),
+        debugShowCheckedModeBanner: false,
+        home: SafeArea(child: HomeScreen()),
       ),
     );
   }
