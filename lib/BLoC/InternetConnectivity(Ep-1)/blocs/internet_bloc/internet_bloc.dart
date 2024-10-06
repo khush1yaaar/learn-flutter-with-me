@@ -2,8 +2,8 @@ import 'dart:async';
 import 'dart:io';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:socials/BLoC/blocs/internet_bloc/internet_event.dart';
-import 'package:socials/BLoC/blocs/internet_bloc/internet_state.dart';
+import 'package:socials/BLoC/InternetConnectivity(Ep-1)/blocs/internet_bloc/internet_event.dart';
+import 'package:socials/BLoC/InternetConnectivity(Ep-1)/blocs/internet_bloc/internet_state.dart';
 
 // InternetBloc manages the internet connectivity state using BLoC pattern.
 class InternetBloc extends Bloc<InternetEvent, InternetState> {

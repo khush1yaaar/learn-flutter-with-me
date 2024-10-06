@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:socials/Cubit/internet_cubit.dart';
+import 'package:socials/Cubit/InternetConnectivity(Ep-2)/internet_cubit.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

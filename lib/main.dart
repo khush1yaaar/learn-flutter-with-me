@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 // import 'package:socials/ResponsiveLayout/LayoutOne/layout_one.dart';
 // ignore: depend_on_referenced_packages
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:socials/Cubit/home_screen.dart';
-import 'package:socials/Cubit/internet_cubit.dart';
+import 'package:socials/Cubit/InternetConnectivity(Ep-2)/home_screen.dart';
+import 'package:socials/Cubit/InternetConnectivity(Ep-2)/internet_cubit.dart';
 import 'package:socials/StateManagement/notifier_provider.dart';
 //import 'package:socials/StateManagement/riverpod_screen.dart';
 import 'package:socials/StateManagement/state_notifier.dart';
