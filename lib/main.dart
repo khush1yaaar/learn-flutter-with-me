@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+// import 'package:flutter_bloc/flutter_bloc.dart';
 // import 'package:socials/ResponsiveLayout/LayoutOne/layout_one.dart';
 // ignore: depend_on_referenced_packages
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:socials/Cubit/InternetConnectivity(Ep-2)/home_screen.dart';
-import 'package:socials/Cubit/InternetConnectivity(Ep-2)/internet_cubit.dart';
+import 'package:socials/BLoC/FormValidation(Ep-3)/welcome_screen.dart';
+// import 'package:socials/Cubit/InternetConnectivity(Ep-2)/home_screen.dart';
+// import 'package:socials/Cubit/InternetConnectivity(Ep-2)/internet_cubit.dart';
 import 'package:socials/StateManagement/notifier_provider.dart';
 //import 'package:socials/StateManagement/riverpod_screen.dart';
 import 'package:socials/StateManagement/state_notifier.dart';
@@ -95,7 +96,7 @@ final numbersChangeNotifierProvider =
 //   }
 // }
 
-//--------------------------------------------------------------BLOC----------------------------------------------------------------------
+//--------------------------------------------------------------BLOC - INTERNET CONNECTIVITY (EP - 1)----------------------------------------------------------------------
 // void main() {
 //   runApp(MyApp());
 // }
@@ -119,9 +120,33 @@ final numbersChangeNotifierProvider =
 //     );
 //   }
 // }
-//---------------------------------------------------------- CUBIT -------------------------------------------------------------------------
+//---------------------------------------------------------- CUBIT INTERNET CONNECTIVITY (EP - 2) -------------------------------------------------------------------------
+// void main() {
+//   runApp(const MyApp());
+// }
+
+// class MyApp extends StatefulWidget {
+//   const MyApp({super.key});
+
+//   @override
+//   State<MyApp> createState() => _MyAppState();
+// }
+
+// class _MyAppState extends State<MyApp> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return BlocProvider(
+//       create: (context) => InternetCubit(), // Correctly create InternetCubit
+//       child: const MaterialApp(
+//         debugShowCheckedModeBanner: false,
+//         home: SafeArea(child: HomeScreen()),
+//       ),
+//     );
+//   }
+// }
+
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatefulWidget {
@@ -134,12 +159,9 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => InternetCubit(), // Correctly create InternetCubit
-      child: const MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: SafeArea(child: HomeScreen()),
-      ),
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: WelcomeScreen(),
     );
   }
 }
