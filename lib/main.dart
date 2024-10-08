@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 // ignore: depend_on_referenced_packages
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:socials/BLoC/FormValidation(Ep-3)/welcome_screen.dart';
+import 'package:socials/BLoC/PhoneAuth(Ep-4)/sign_in_screen.dart';
 // import 'package:socials/Cubit/InternetConnectivity(Ep-2)/home_screen.dart';
 // import 'package:socials/Cubit/InternetConnectivity(Ep-2)/internet_cubit.dart';
 import 'package:socials/StateManagement/notifier_provider.dart';
@@ -11,6 +12,8 @@ import 'package:socials/StateManagement/notifier_provider.dart';
 import 'package:socials/StateManagement/state_notifier.dart';
 // import 'package:socials/Theme/theme_screen.dart';
 // import 'package:socials/Theme/themes.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
 // void main() {
 //   runApp(ProviderScope(child: const MyApp()));
@@ -144,9 +147,33 @@ final numbersChangeNotifierProvider =
 //     );
 //   }
 // }
+//-------------------------------------------------------------------- BLOC FORM VALIDATION (EP-3) --------------------------------------------------------------
+// void main() {
+//   runApp(MyApp());
+// }
 
-void main() {
-  runApp(MyApp());
+// class MyApp extends StatefulWidget {
+//   const MyApp({super.key});
+
+//   @override
+//   State<MyApp> createState() => _MyAppState();
+// }
+
+// class _MyAppState extends State<MyApp> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return const MaterialApp(
+//       debugShowCheckedModeBanner: false,
+//       home: WelcomeScreen(),
+//     );
+//   }
+// }
+//---------------------------------------------------------------- BLOC PHONE AUTH (EP-4)-------------------------------------------------------------
+void main() async {
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
@@ -161,7 +188,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: WelcomeScreen(),
+      home: SignInScreen(),
     );
   }
 }
