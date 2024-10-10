@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 // ignore: depend_on_referenced_packages
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:socials/BLoC/FormValidation(Ep-3)/welcome_screen.dart';
-import 'package:socials/BLoC/PhoneAuth(Ep-4)/sign_in_screen.dart';
+import 'package:socials/Cubit/PhoneAuth(Ep-4)/sign_in_screen.dart';
 // import 'package:socials/Cubit/InternetConnectivity(Ep-2)/home_screen.dart';
 // import 'package:socials/Cubit/InternetConnectivity(Ep-2)/internet_cubit.dart';
 import 'package:socials/StateManagement/notifier_provider.dart';
@@ -170,6 +170,7 @@ final numbersChangeNotifierProvider =
 // }
 //---------------------------------------------------------------- BLOC PHONE AUTH (EP-4)-------------------------------------------------------------
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );

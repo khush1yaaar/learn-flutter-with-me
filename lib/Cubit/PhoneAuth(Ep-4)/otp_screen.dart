@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:socials/BLoC/PhoneAuth(Ep-4)/home_screen.dart';
+import 'package:socials/Cubit/PhoneAuth(Ep-4)/home_screen.dart';
 
 class OTPScreen extends StatefulWidget {
   const OTPScreen({super.key});

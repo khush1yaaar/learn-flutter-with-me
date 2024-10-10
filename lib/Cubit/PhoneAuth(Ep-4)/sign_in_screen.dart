@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:socials/BLoC/PhoneAuth(Ep-4)/otp_screen.dart';
+import 'package:socials/Cubit/PhoneAuth(Ep-4)/otp_screen.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({super.key});
