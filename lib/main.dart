@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 // import 'package:flutter_bloc/flutter_bloc.dart';
 // import 'package:socials/ResponsiveLayout/LayoutOne/layout_one.dart';
 // ignore: depend_on_referenced_packages
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:socials/BLoC/FormValidation(Ep-3)/welcome_screen.dart';
+import 'package:socials/Cubit/PhoneAuth(Ep-4)/Cubit/auth_cubit.dart';
 import 'package:socials/Cubit/PhoneAuth(Ep-4)/sign_in_screen.dart';
 // import 'package:socials/Cubit/InternetConnectivity(Ep-2)/home_screen.dart';
 // import 'package:socials/Cubit/InternetConnectivity(Ep-2)/internet_cubit.dart';
@@ -187,9 +189,12 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: SignInScreen(),
+    return BlocProvider(
+      create: (context) => AuthCubit(),
+      child: const MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: SignInScreen(),
+      ),
     );
   }
 }
