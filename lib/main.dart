@@ -1,23 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-// import 'package:flutter_bloc/flutter_bloc.dart';
-// import 'package:socials/ResponsiveLayout/LayoutOne/layout_one.dart';
-// ignore: depend_on_referenced_packages
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:socials/Cubit/PhoneAuth(Ep-4)/Cubit/auth_cubit.dart';
-import 'package:socials/Cubit/PhoneAuth(Ep-4)/Cubit/auth_state.dart';
-import 'package:socials/Cubit/PhoneAuth(Ep-4)/home_screen.dart';
-import 'package:socials/Cubit/PhoneAuth(Ep-4)/sign_in_screen.dart';
-// import 'package:socials/Cubit/InternetConnectivity(Ep-2)/home_screen.dart';
-// import 'package:socials/Cubit/InternetConnectivity(Ep-2)/internet_cubit.dart';
+import 'package:socials/Cubit/GeneratedRoutes(Ep-5)/routes.dart';
 import 'package:socials/StateManagement/notifier_provider.dart';
-//import 'package:socials/StateManagement/riverpod_screen.dart';
 import 'package:socials/StateManagement/state_notifier.dart';
-// import 'package:socials/Theme/theme_screen.dart';
-// import 'package:socials/Theme/themes.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'firebase_options.dart';
 
+//------------------------------------------------------RIVERPOD--------------------------------------------------------------------
 // void main() {
 //   runApp(ProviderScope(child: const MyApp()));
 // }
@@ -172,12 +159,50 @@ final numbersChangeNotifierProvider =
 //   }
 // }
 //---------------------------------------------------------------- BLOC PHONE AUTH (EP-4)-------------------------------------------------------------
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
-  runApp(const MyApp());
+// void main() async {
+//   WidgetsFlutterBinding.ensureInitialized();
+//   await Firebase.initializeApp(
+//     options: DefaultFirebaseOptions.currentPlatform,
+//   );
+//   runApp(const MyApp());
+// }
+
+// class MyApp extends StatefulWidget {
+//   const MyApp({super.key});
+
+//   @override
+//   State<MyApp> createState() => _MyAppState();
+// }
+
+// class _MyAppState extends State<MyApp> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return BlocProvider(
+//       create: (context) => AuthCubit(),
+//       child: MaterialApp(
+//         debugShowCheckedModeBanner: false,
+//         home: BlocBuilder<AuthCubit, AuthState>(
+//           buildWhen: (oldState, newState) {
+//             return oldState is AuthInitialState;
+//           },
+//           builder: (context, state) {
+//             if (state is AuthLoggedInState) {
+//               return const HomeScreen();
+//             } else if (state is AuthLoggedOutState) {
+//               return const SignInScreen();
+//             } else {
+//               return const Scaffold();
+//             }
+//           },
+//         ),
+//       ),
+//     );
+//   }
+// }
+
+//-----------------------------------------------------BLOC GENERATED ROUTES (EP-5)-------------------------------------------------------------------
+void main() {
+  runApp(MyApp());
 }
 
 class MyApp extends StatefulWidget {
@@ -190,25 +215,10 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => AuthCubit(),
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: BlocBuilder<AuthCubit, AuthState>(
-          buildWhen: (oldState, newState) {
-            return oldState is AuthInitialState;
-          },
-          builder: (context, state) {
-            if (state is AuthLoggedInState) {
-              return const HomeScreen();
-            } else if (state is AuthLoggedOutState) {
-              return const SignInScreen();
-            } else {
-              return const Scaffold();
-            }
-          },
-        ),
-      ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      onGenerateRoute: Routes().onGenerateRoute,
+      initialRoute: "/first",
     );
   }
 }
