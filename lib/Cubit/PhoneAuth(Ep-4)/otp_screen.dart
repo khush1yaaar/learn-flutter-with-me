@@ -46,7 +46,11 @@ class _OTPScreenState extends State<OTPScreen> {
                           builder: (context) => const HomeScreen()));
                 } else if (state is AuthErrorState) {
                   ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text('Incorrect OTP'))
+                    SnackBar(
+                      backgroundColor: Colors.redAccent,
+                      duration: const Duration(milliseconds: 3000),
+                      content: Text(state.error)
+                    )
                   );
                 }
               },

@@ -4,7 +4,14 @@ import 'package:socials/Cubit/PhoneAuth(Ep-4)/Cubit/auth_state.dart';
 
 class AuthCubit extends Cubit<AuthState> {
   final FirebaseAuth _auth = FirebaseAuth.instance;
-  AuthCubit() : super(AuthInitialState());
+  AuthCubit() : super(AuthInitialState()) {
+    User? currentUser = _auth.currentUser;
+    if (currentUser != null) {
+      emit(AuthLoggedInState(currentUser));
+    } else {
+      emit(AuthLoggedOutState());
+    }
+  }
 
   String? _verificationID;
 
@@ -46,5 +53,10 @@ class AuthCubit extends Cubit<AuthState> {
     } on FirebaseAuthException catch (e) {
       emit(AuthErrorState(e.message.toString()));
     }
+  }
+
+  void signOut() async {
+    await _auth.signOut();
+    emit(AuthLoggedOutState());
   }
 }

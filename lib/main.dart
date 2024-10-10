@@ -4,8 +4,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 // import 'package:socials/ResponsiveLayout/LayoutOne/layout_one.dart';
 // ignore: depend_on_referenced_packages
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:socials/BLoC/FormValidation(Ep-3)/welcome_screen.dart';
 import 'package:socials/Cubit/PhoneAuth(Ep-4)/Cubit/auth_cubit.dart';
+import 'package:socials/Cubit/PhoneAuth(Ep-4)/Cubit/auth_state.dart';
+import 'package:socials/Cubit/PhoneAuth(Ep-4)/home_screen.dart';
 import 'package:socials/Cubit/PhoneAuth(Ep-4)/sign_in_screen.dart';
 // import 'package:socials/Cubit/InternetConnectivity(Ep-2)/home_screen.dart';
 // import 'package:socials/Cubit/InternetConnectivity(Ep-2)/internet_cubit.dart';
@@ -191,9 +192,22 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => AuthCubit(),
-      child: const MaterialApp(
+      child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: SignInScreen(),
+        home: BlocBuilder<AuthCubit, AuthState>(
+          buildWhen: (oldState, newState) {
+            return oldState is AuthInitialState;
+          },
+          builder: (context, state) {
+            if (state is AuthLoggedInState) {
+              return const HomeScreen();
+            } else if (state is AuthLoggedOutState) {
+              return const SignInScreen();
+            } else {
+              return const Scaffold();
+            }
+          },
+        ),
       ),
     );
   }
