@@ -1,4 +1,4 @@
-# socials
+# LearnFlutterWithMe
 
 A new Flutter project.
 
