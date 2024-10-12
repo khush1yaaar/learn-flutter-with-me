@@ -11,6 +11,7 @@ import 'package:socials/StateManagement/notifier_provider.dart';
 import 'package:socials/StateManagement/state_notifier.dart';
 
 import 'Cubit/APIHandling(Ep-6)/data/Models/post_model.dart';
+import 'GetX/views/shopping_page.dart';
 
 //------------------------------------------------------RIVERPOD--------------------------------------------------------------------
 // void main() {
@@ -230,9 +231,33 @@ final numbersChangeNotifierProvider =
 //     );
 //   }
 // }
-
-void main() async {
-  runApp(const MyApp());
+// --------------------------------------------------- API HANDELING CUBIT (EP-6) ----------------------------------------------------------
+// void main() async {
+//   runApp(const MyApp());
+// }
+//
+// class MyApp extends StatefulWidget {
+//   const MyApp({super.key});
+//
+//   @override
+//   State<MyApp> createState() => _MyAppState();
+// }
+//
+// class _MyAppState extends State<MyApp> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return BlocProvider(
+//       create: (context) => PostCubit(),
+//       child: const MaterialApp(
+//         debugShowCheckedModeBanner: false,
+//         home: HomeScreen(),
+//       ),
+//     );
+//   }
+// }
+//----------------------------------------------------------- GETX TUTORIAL - 1 -----------------------------------------------------
+void main() {
+  runApp(MyApp());
 }
 
 class MyApp extends StatefulWidget {
@@ -245,12 +270,9 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => PostCubit(),
-      child: const MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: HomeScreen(),
-      ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: ShoppingPage(),
     );
   }
 }
