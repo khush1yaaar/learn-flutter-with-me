@@ -1,7 +1,3 @@
-To streamline the structure and avoid repeating links, we can integrate the references directly into the **Learning Path** and **Table of Contents** without a separate "References" section. Here's the revised version:
-
----
-
 # LearnFlutterWithMe
 
 A new Flutter project dedicated to learning Flutter step-by-step by following a structured path, completing tasks, and integrating various Flutter concepts and packages.
@@ -52,22 +48,22 @@ This project follows a structured learning path. Each section focuses on a speci
 Understanding the proper folder structure is crucial for scaling Flutter applications.
 
 - **References:**
-  - [Flutter Project Structure | Live Discussion](https://youtu.be/your-video-link)
+  - [Flutter Project Structure | Live Discussion]((https://www.youtube.com/watch?v=IMvi7XthGvY))
 
 ### 2. Responsive Layout
 
 Learn how to make Flutter apps responsive across different screen sizes and orientations.
 
 - **References:**
-  - [Flutter Responsive Design Tutorial](https://youtu.be/your-video-link)
-  - [Flutter Responsive Design Guide](https://flutter.dev/docs/development/ui/layout/responsive)
+  - [Flutter Responsive Design Tutorial - 1](https://www.youtube.com/watch?v=mlP5VPnxg7o)
+  - [Flutter Responsive Design Guide](https://www.youtube.com/watch?v=EH92XnCU1Cc)
 
 ### 3. RxDart in Flutter
 
 RxDart extends the capabilities of Dart Streams and StreamControllers.
 
 - **References:**
-  - [RxDart Explained - The Flutter Way](https://youtu.be/your-video-link)
+  - [RxDart Explained - The Flutter Way](https://www.youtube.com/watch?v=8fOoF7icyn0)
 
 ### 4. BLoC Pattern
 
@@ -99,9 +95,9 @@ Implement the BLoC (Business Logic Component) pattern for state management.
 GetX is a fast, stable, and lightweight state management library in Flutter.
 
 - **References:**
-  - [Introduction to GetX | Flutter Made Easy](https://youtu.be/your-video-link)
-  - [GetX State Management Tutorial with Flutter](https://youtu.be/your-video-link)
-  - [GetX State Management with Flutter | GetBuilder, GetX and Obx](https://youtu.be/your-video-link)
+  - [Introduction to GetX | Flutter Made Easy](https://www.youtube.com/watch?v=rI7bwmMOuXE&list=PL3wGb9_yWsvJ-QUBbkXvhjhQFRsb4wqbY&index=2)
+  - [GetX State Management Tutorial with Flutter](https://www.youtube.com/watch?v=ZnevdXDH25Q&list=PL3wGb9_yWsvJ-QUBbkXvhjhQFRsb4wqbY&index=3)
+  - [GetX State Management with Flutter | GetBuilder, GetX and Obx](https://www.youtube.com/watch?v=-FAiH638BHo&list=PL3wGb9_yWsvJ-QUBbkXvhjhQFRsb4wqbY&index=3)
 
 #### Task 2: Shopping App
 
@@ -117,7 +113,7 @@ Create a shopping app with two pages.
 - Display items added to the cart.
 
 - **References:**
-  - [REST API with GetX | Flutter Tutorial | Shopping App](https://youtu.be/your-video-link)
+  - [REST API with GetX | Flutter Tutorial | Shopping App](https://www.youtube.com/watch?v=apPH1CCOtKQ&list=PL3wGb9_yWsvJ-QUBbkXvhjhQFRsb4wqbY&index=5)
 
 **Note:** Creating tutorials for this task is mandatory.
 
@@ -126,14 +122,14 @@ Create a shopping app with two pages.
 Learn how to handle public and protected routes in Flutter.
 
 - **References:**
-  - [Flutter Web Routing Public and Protected Routes](https://youtu.be/your-video-link)
+  - [Flutter Web Routing Public and Protected Routes](https://www.youtube.com/watch?v=3PosA-tbDeE)
 
 ### 7. Auto Route
 
 Implement nested routing using the Auto Route package.
 
 - **References:**
-  - [Flutter Bottom Navigation with Nested Routing (Auto Route)](https://youtu.be/your-video-link)
+  - [Flutter Bottom Navigation with Nested Routing (Auto Route)](https://www.youtube.com/watch?v=9oH42_Axr3Q)
 
 ### 8. Firebase Integration
 
@@ -159,7 +155,7 @@ Use Firebase Storage for storing and retrieving data.
 Store data locally using Shared Preferences.
 
 - **References:**
-  - [Shared Preferences in Flutter](https://youtu.be/your-video-link)
+  - [Shared Preferences in Flutter](https://www.youtube.com/watch?v=5hQNFQ3y6UY)
 
 #### Task 3: Blog App
 
@@ -178,14 +174,14 @@ Store data locally using Shared Preferences.
 8. Make the app web and mobile responsive.
 
 - **References:**
-  - [Build Flutter Blog App From Scratch | Flutter Tutorial For Beginners](https://youtu.be/your-video-link)
+  - [Build Flutter Blog App From Scratch | Flutter Tutorial For Beginners](https://www.youtube.com/watch?v=E9gyL-UcQco)
 
 ## Final Project: Travel App
 
 Follow the reference video to create a complete travel application.
 
 - **Reference:**
-  - [2022 Flutter Master Class Travel App | Tutorial for Beginners to Advanced | iOS & Android](https://youtu.be/your-video-link)
+  - [2022 Flutter Master Class Travel App | Tutorial for Beginners to Advanced | iOS & Android](https://www.youtube.com/watch?v=x4DydJKVvQk)
 
 ---
 
