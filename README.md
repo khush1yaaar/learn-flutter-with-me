@@ -1,3 +1,7 @@
+Here's the revised ReadMe file with the requested adjustments:
+
+---
+
 # LearnFlutterWithMe
 
 A new Flutter project dedicated to learning Flutter step-by-step by following a structured path, completing tasks, and integrating various Flutter concepts and packages.
@@ -32,10 +36,9 @@ This project is a starting point for learning Flutter development. It contains m
     - [8.2. Storage](#82-storage)
   - [9. Shared Preferences](#9-shared-preferences)
     - [Task 3: Blog App](#task-3-blog-app)
-- [Final Project: Travel App](#final-project-travel-app)
 - [How to Use This Project](#how-to-use-this-project)
+- [Final Project: Travel App](#final-project-travel-app)
 - [Contributing](#contributing)
-- [License](#license)
 
 ---
 
@@ -48,7 +51,7 @@ This project follows a structured learning path. Each section focuses on a speci
 Understanding the proper folder structure is crucial for scaling Flutter applications.
 
 - **References:**
-  - [Flutter Project Structure | Live Discussion]((https://www.youtube.com/watch?v=IMvi7XthGvY))
+  - [Flutter Project Structure | Live Discussion](https://www.youtube.com/watch?v=IMvi7XthGvY)
 
 ### 2. Responsive Layout
 
@@ -176,13 +179,87 @@ Store data locally using Shared Preferences.
 - **References:**
   - [Build Flutter Blog App From Scratch | Flutter Tutorial For Beginners](https://www.youtube.com/watch?v=E9gyL-UcQco)
 
-## Final Project: Travel App
+---
 
-Follow the reference video to create a complete travel application.
+## How to Use This Project
 
-- **Reference:**
-  - [2022 Flutter Master Class Travel App | Tutorial for Beginners to Advanced | iOS & Android](https://www.youtube.com/watch?v=x4DydJKVvQk)
+The main.dart file is structured to allow you to run different parts of the project by uncommenting specific sections of code. Each section corresponds to a particular learning topic or task.
+
+**Example:**
+
+```dart
+//-------------------------------------------------------------------- BLOC FORM VALIDATION (EP-3) --------------------------------------------------------------
+// void main() {
+//   runApp(MyApp());
+// }
+//
+// class MyApp extends StatefulWidget {
+//   const MyApp({super.key});
+//
+//   @override
+//   State<MyApp> createState() => _MyAppState();
+// }
+//
+// class _MyAppState extends State<MyApp> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return const MaterialApp(
+//       debugShowCheckedModeBanner: false,
+//       home: WelcomeScreen(),
+//     );
+//   }
+//}
+```
+
+To run the theme example:
+
+1. Uncomment the code under the ENABLE FOR THEME section.
+2. Comment out other sections to avoid conflicts.
+3. Run the app using `flutter run`.
+
+**Similarly, you can run other examples:**
+
+- **Responsive Layout:**
+
+```dart
+// ------------------------------------------------ FOR RESPONSIVE LAYOUT ------------------------------------------
+
+// void main() {
+//   runApp(MyApp());
+// }
+
+// class MyApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: LayoutOne(),
+//     );
+//  
+
+ }
+// }
+```
 
 ---
 
-This approach integrates the relevant links directly with the topics in the learning path, making it easier to follow without duplicating information. Let me know if you'd like further adjustments!
+Apologies for the oversight! Here's the corrected section with the link added:
+
+---
+
+## Final Project: Travel App
+
+By the end of the course, you’ll build a Travel App with features like:
+
+- Firebase authentication
+- Firebase Firestore for data
+- Payment gateway integration
+- Advanced state management with GetX or BLoC
+
+- **References:**
+  - [Flutter Travel App UI Tutorial](https://www.youtube.com/watch?v=1xKYV8GJ8Ls)
+
+---
+
+## Contributing
+
+Contributions are always welcome! Please follow the contributing guidelines.
