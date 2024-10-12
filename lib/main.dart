@@ -1,8 +1,16 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:socials/Cubit/APIHandling(Ep-6)/data/Reposetories/post_reposetories.dart';
+import 'package:socials/Cubit/APIHandling(Ep-6)/logic/Cubit/PostCubit/post_cubit.dart';
+import 'package:socials/Cubit/APIHandling(Ep-6)/presentation/home_screen.dart';
 import 'package:socials/Cubit/GeneratedRoutes(Ep-5)/routes.dart';
 import 'package:socials/StateManagement/notifier_provider.dart';
 import 'package:socials/StateManagement/state_notifier.dart';
+
+import 'Cubit/APIHandling(Ep-6)/data/Models/post_model.dart';
 
 //------------------------------------------------------RIVERPOD--------------------------------------------------------------------
 // void main() {
@@ -141,14 +149,14 @@ final numbersChangeNotifierProvider =
 // void main() {
 //   runApp(MyApp());
 // }
-
+//
 // class MyApp extends StatefulWidget {
 //   const MyApp({super.key});
-
+//
 //   @override
 //   State<MyApp> createState() => _MyAppState();
 // }
-
+//
 // class _MyAppState extends State<MyApp> {
 //   @override
 //   Widget build(BuildContext context) {
@@ -201,8 +209,30 @@ final numbersChangeNotifierProvider =
 // }
 
 //-----------------------------------------------------BLOC GENERATED ROUTES (EP-5)-------------------------------------------------------------------
-void main() {
-  runApp(MyApp());
+// void main() {
+//   runApp(MyApp());
+// }
+//
+// class MyApp extends StatefulWidget {
+//   const MyApp({super.key});
+//
+//   @override
+//   State<MyApp> createState() => _MyAppState();
+// }
+//
+// class _MyAppState extends State<MyApp> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       debugShowCheckedModeBanner: false,
+//       onGenerateRoute: Routes().onGenerateRoute,
+//       initialRoute: "/first",
+//     );
+//   }
+// }
+
+void main() async {
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
@@ -215,10 +245,12 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      onGenerateRoute: Routes().onGenerateRoute,
-      initialRoute: "/first",
+    return BlocProvider(
+      create: (context) => PostCubit(),
+      child: const MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: HomeScreen(),
+      ),
     );
   }
 }
