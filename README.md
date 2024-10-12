@@ -184,7 +184,7 @@ The main.dart file is structured to allow you to run different parts of the proj
 **Example:**
 
 ```dart
-//-------------------------------------------------------------------- BLOC FORM VALIDATION (EP-3) --------------------------------------------------------------
+//-------------------------------------------------------------------- Enable for BLOC FORM VALIDATION (EP-3) --------------------------------------------------------------
 // void main() {
 //   runApp(MyApp());
 // }
@@ -207,9 +207,9 @@ The main.dart file is structured to allow you to run different parts of the proj
 //}
 ```
 
-To run the theme example:
+To run the BLOC FORM VALIDATION example:
 
-1. Uncomment the code under the ENABLE FOR THEME section.
+1. Uncomment the code under the ENABLE FOR BLOC FORM VALIDATION (EP-3) section.
 2. Comment out other sections to avoid conflicts.
 3. Run the app using `flutter run`.
 
@@ -218,7 +218,7 @@ To run the theme example:
 - **Responsive Layout:**
 
 ```dart
-// ------------------------------------------------ FOR RESPONSIVE LAYOUT ------------------------------------------
+// ------------------------------------------------ ENABLE FOR RESPONSIVE LAYOUT ------------------------------------------
 
 // void main() {
 //   runApp(MyApp());
@@ -236,12 +236,6 @@ To run the theme example:
 // }
 ```
 
----
-
-Apologies for the oversight! Here's the corrected section with the link added:
-
----
-
 ## Final Project: Travel App
 
 By the end of the course, you’ll build a Travel App with features like:
@@ -252,7 +246,7 @@ By the end of the course, you’ll build a Travel App with features like:
 - Advanced state management with GetX or BLoC
 
 - **References:**
-  - [Flutter Travel App UI Tutorial](https://www.youtube.com/watch?v=1xKYV8GJ8Ls)
+  - [Flutter Travel App UI Tutorial](https://www.youtube.com/watch?v=x4DydJKVvQk)
 
 ---
 
